@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -260,7 +260,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFG-xQ-Eff">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFG-xQ-Eff" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="62.5" y="334" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -364,7 +364,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="20"/>
                                                 <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zPk-2u-9Wx">
                                                 <rect key="frame" x="0.0" y="45" width="250" height="2"/>
@@ -379,7 +379,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="pah-Dm-UgX">
                                         <rect key="frame" x="0.0" y="136" width="250" height="47"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LJh-2k-8DK">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LJh-2k-8DK">
                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="20"/>
                                                 <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
@@ -397,7 +397,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Maq-YJ-vZx">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Maq-YJ-vZx" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="62" y="581" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -407,6 +407,9 @@
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccountPressed:" destination="uc5-Uk-dZG" eventType="touchUpInside" id="ABU-mL-ZK4"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="n7C-0o-g6V">
                                 <rect key="frame" x="137" y="379" width="100" height="100"/>
@@ -427,6 +430,7 @@
                                 </state>
                                 <connections>
                                     <action selector="createAcctBtnPressed:" destination="lVj-Ut-sLq" eventType="touchUpInside" id="5Gb-QL-EMH"/>
+                                    <action selector="pickBGColorPressed:" destination="uc5-Uk-dZG" eventType="touchUpInside" id="qJg-DA-Xqo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zR5-F0-rdJ">
@@ -440,6 +444,7 @@
                                 </state>
                                 <connections>
                                     <action selector="createAcctBtnPressed:" destination="lVj-Ut-sLq" eventType="touchUpInside" id="lS9-Tx-ax1"/>
+                                    <action selector="pickAvatarPressed:" destination="uc5-Uk-dZG" eventType="touchUpInside" id="2th-Lc-jdo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -464,6 +469,10 @@
                         <viewLayoutGuide key="safeArea" id="W4r-KA-pNq"/>
                     </view>
                     <connections>
+                        <outlet property="emailTxt" destination="taT-vx-nK0" id="mOL-3s-d1t"/>
+                        <outlet property="passTxt" destination="LJh-2k-8DK" id="PSi-Q1-fFv"/>
+                        <outlet property="userImg" destination="n7C-0o-g6V" id="Bum-zX-En2"/>
+                        <outlet property="usernameTxt" destination="HiY-Cn-0ZW" id="iwV-dF-3HJ"/>
                         <segue destination="ANY-N0-tvW" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="DEM-eu-QWj"/>
                     </connections>
                 </viewController>
